@@ -46,10 +46,8 @@ GameObject:
   - component: {fileID: 3814575268762233545}
   - component: {fileID: 304180374}
   - component: {fileID: 304180373}
-  - component: {fileID: 304180379}
   - component: {fileID: 304180382}
-  - component: {fileID: 304180383}
-  - component: {fileID: 304180384}
+  - component: {fileID: 304180379}
   m_Layer: 0
   m_Name: Player One
   m_TagString: Player
@@ -131,7 +129,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3814575268762233586}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -156,7 +154,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: affdc97dc2d6fc445ad6dfb458bcf342, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -174,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: cbd9f1d6a825746d5b7ae1b0e592ba96, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -188,7 +186,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 304180383}
+      - m_Target: {fileID: 304180383, guid: bbacd437ba5a946dc8cfda553268d547, type: 3}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnHorizontalMove
         m_Mode: 0
@@ -208,7 +206,7 @@ MonoBehaviour:
     m_ActionName: Player_Map/Movement2[/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 304180384}
+      - m_Target: {fileID: 304180384, guid: bbacd437ba5a946dc8cfda553268d547, type: 3}
         m_TargetAssemblyTypeName: JumpController, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -280,25 +278,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &304180379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3814575268762233586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0d720a52c36c064690a25b89448c4c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  isGrounded: 0
-  groundedCheck: {fileID: 3267639800542959703}
-  raycastLength: 0.1
-  groundMasks:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!61 &304180382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -323,9 +302,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67349243, y: 5.22}
+  m_Size: {x: 1.51, y: 5.22}
   m_EdgeRadius: 0
---- !u!114 &304180383
+--- !u!114 &304180379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,25 +313,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3814575268762233586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c555d917615b16048b0a67a5a58f219b, type: 3}
+  m_Script: {fileID: 11500000, guid: 82fde531528e444bb841bd089686d76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalMoveValue: 0
-  moveSpeed: 6
---- !u!114 &304180384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3814575268762233586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853917fe538c24047b5a3f55694dfb3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpVelocity: 12.8
-  fallModifier: 2.5
-  minJumpModifier: 5
-  jumpPressed: 0
-  jumpReleased: 0
+  speed: 0
+  jumpValue: 1.5
