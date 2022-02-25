@@ -23,7 +23,7 @@ TagManager:
   - Background
   - Water
   - UI
-  - 
+  - Platforms
   - 
   - 
   - 
@@ -55,4 +55,10 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2804451303
+    locked: 0
+  - name: FloatingPlatforms
+    uniqueID: 2407089819
     locked: 0
